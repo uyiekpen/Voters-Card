@@ -151,7 +151,6 @@ const Mobile = styled.div`
     position: fixed;
     z-index: 10;
 
-    background: rgba(99, 220, 254, 0.37);
     border-radius: 0px 0 10px 0;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.3px);
