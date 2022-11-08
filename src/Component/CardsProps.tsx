@@ -93,9 +93,11 @@ const Container = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
-  position: absolute;
-  left: 340px;
-  top: 10px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    min-height: 400px;
+  }
 `;
 
 export default CardsProps;
