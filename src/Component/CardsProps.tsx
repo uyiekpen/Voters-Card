@@ -48,6 +48,21 @@ const SearchInput = styled.input`
   padding: 15px 80px;
   border-radius: 20px;
   outline: none;
+  @media screen and (max-width: 760px) {
+    padding: 15px 50px;
+    border-radius: 20px;
+    outline: none;
+  }
+  @media screen and (max-width: 380px) {
+    padding: 15px 30px;
+    border-radius: 20px;
+    outline: none;
+  }
+  @media screen and (max-width: 320px) {
+    padding: 15px 10px;
+    border-radius: 20px;
+    outline: none;
+  }
 `;
 const Button = styled.button`
   :hover {
@@ -64,12 +79,34 @@ const Button = styled.button`
   font-weight: 600;
   font-size: 15px;
   color: white;
+  @media screen and (max-width: 760px) {
+    :hover {
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+    background-color: black;
+    border-radius: 20px;
+
+    transition: all 360ms;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
+  }
 `;
 const Input = styled.form`
   margin-top: 20px;
   display: flex;
   justify-content: space-around;
   width: 100%;
+  @media screen and (max-width: 760px) {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
 `;
 const Card = styled.div`
   height: 470px;
@@ -81,22 +118,44 @@ const Card = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  @media screen and (max-width: 760px) {
+    height: 400px;
+    width: 100%;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 const Wrapper = styled.div`
   width: 100vw;
   display: flex;
+  @media screen and (max-width: 760px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+  }
 `;
 const Container = styled.div`
   width: 100vw;
   min-height: 600px;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    min-height: 400px;
+  @media screen and (max-width: 760px) {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 

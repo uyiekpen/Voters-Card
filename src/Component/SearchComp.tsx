@@ -7,7 +7,6 @@ const SearchComp = () => {
   const [toggled, setToggled] = useState(false);
   const [youthCordinator, SetYouthCordinator] = useState(false);
   const [deputy, setDeputy] = useState(false);
-  const [avatar, setAvatar] = useState(false);
 
   return (
     <Container>
@@ -29,13 +28,7 @@ const SearchComp = () => {
                 View Menu
               </Pointed>
             )}
-            {avatar ? (
-              <YouthCordinator />
-            ) : youthCordinator ? (
-              <YouthCordinator />
-            ) : deputy ? (
-              <Deputy />
-            ) : null}
+            {youthCordinator ? <YouthCordinator /> : deputy ? <Deputy /> : null}
           </CardWrapper>
         </PointedHolder>
       </Wrapper>
@@ -49,6 +42,7 @@ const SearchComp = () => {
             onClick={() => {
               SetYouthCordinator(true);
               setDeputy(false);
+              setToggled(false);
             }}
           >
             Youth Cordinator
@@ -59,6 +53,7 @@ const SearchComp = () => {
             onClick={() => {
               SetYouthCordinator(false);
               setDeputy(true);
+              setToggled(false);
             }}
           >
             Deputy Youth Cordinator{" "}
